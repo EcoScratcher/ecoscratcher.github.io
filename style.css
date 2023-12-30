@@ -39,6 +39,18 @@ a:active {
     background-color: rgb(30, 30, 30);
 }
 
+@media screen and (max-width: 700px) {
+    .sidebar {
+        height: auto;
+        width: 100%;
+        position: sticky;
+    }
+
+    main {
+        margin-left: 0px;
+    }
+}
+
 h1 {
     font-family: 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 500;
