@@ -1,8 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-nz">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-index.css">
+</head>
+
 <body>
-<h1> test </h1>
-<h2> test again!</h2>
-<p>end</p>
+    <div class="sidebar">
+        <img class="logo" src="/assets/logo.svg" height=151.3 width=198>
+        <br>
+        <ul class="social">
+            <a href="https://www.roblox.com/users/153299765/profile"><img src="assets/roblox.png" alt="Roblox"></a>
+            <a href="https://bsky.app/profile/ecoscratcher.bsky.social"><img src="assets/bsky.png" alt="Bluesky"></a>
+            <a href="https://mastodon.online/@EcoScratcher"><img src="assets/mastodon.png" alt="Mastodon"></a>
+            <a href="https://twitter.com/EcoScratcher"><img src="assets/twitter.png" alt="X (formerly Twitter)"></a>
+            <a href="https://discord.com/invite/PSx2cN9"><img src="assets/discord.png" alt="Discord"></a>
+            <a href="https://guilded.gg/ecoscratcher"><img src="assets/guilded.png" alt="Guilded"></a>
+        </ul>
+    </div>
+    <main>
+        <div class="project">
+            <img src="">
+            <h2>???</h2>
+            <p>A secret project coming soon to Roblox...</p>
+        </div>
+        <div class="project">
+            <img src="">
+            <h2><a href="https://explorethemetaverse.substack.com">Explorers of the Metaverse</a></h2>
+            <p>Blog covering all things Roblox, from unreleased features to game reviews.</p>
+            <ul id="article-list">
+                <!-- intentionally left blank for js to handle -->
+            </ul>
+            <script>
+                // Fetches first few articles from Explorers of the Metaverse and displays them here
+                var contentStart = document.getElementById("article-list")
+                const RSS_URL = "https://explorethemetaverse.substack.com/feed"
+
+                function createArticleListing(articleName, articleCoverImage, articleDesc) {
+                    const item = document.createElement("li");
+                    const title = item.createTextNode(articleName);
+                    item.appendChild(title);
+                    contentStart.appendChild(item);
+                }
+
+                try {
+                    fetch(RSS_URL, {
+                        mode: "no-cors"
+                    })
+                        .then(response => response.text)
+                        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+                        .then(data => {
+                            const articles = data.querySelectorAll();
+                            articles.forEach(article => {
+                                createArticleListing(article.querySelector("title"), article.querySelector("image"), article.querySelector("desc"))
+                            })
+                        })
+                } catch (error) {
+                    console.error(`Unable to fetch RSS feed: ${error.message}`);
+                }
+            </script>
+        </div>
+        <div class="project">
+            <img src="">
+            <h2><a href="https://roblox.com">Motorsport Tycoon</a></h2>
+            <p>Start your own karting team and watch it progress through the ranks, being your own team boss.</p>
+        </div>
+        <div class="project">
+            <img src="">
+            <h2><a href="https://roblox.com">Binary Papers</a></h2>
+            <p>Find the funniest combination of cards. A more Roblox-appropriate version of Cards Against Humanity.</p>
+        </div>
+    </main>
 </body>
+
 </html>
