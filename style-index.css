@@ -22,7 +22,3 @@
     grid-template-columns: repeat(6, 1fr);
     justify-content: center;
 }
-
-.project h2 {
-    font-weight: 300;
-}

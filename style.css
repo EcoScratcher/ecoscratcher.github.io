@@ -58,7 +58,7 @@ h1 {
 }
 
 h2 {
-    font-weight: 300;
+    font-weight: 700;
     background-color: #000000;
     border-color: #000000;
     border-width: 0.3em;
@@ -66,6 +66,10 @@ h2 {
     padding: 5px 5px 5px 10px;
     margin-block-start: auto;
     margin-block-end: auto;
+}
+
+h3 {
+    padding: 0px 5px 0px calc(5px + 10px)
 }
 
 p {
