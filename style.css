@@ -11,13 +11,38 @@ main {
     padding-left: 10px;
 }
 
+h1 {
+    font-family: 'Source Code Pro', 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}
+
+h2 {
+    font-weight: 700;
+    background-color: #000000;
+    border-color: #000000;
+    border-width: 0.3em;
+    border-radius: 10px;
+    padding: 5px 5px 5px 10px;
+    margin-block-start: auto;
+    margin-block-end: auto;
+}
+
+h3 {
+    padding: 0px 5px 0px calc(5px + 10px)
+}
+
+p {
+    font-weight: 100;
+    padding: 0px 5px 0px calc(5px + 10px)
+}
+
 h2 a {
     text-decoration: none;
 }
 
 a {
     text-decoration-style: dashed;
-    color: #00ff00;
+    color: rgb(0, 200, 0);
     text-decoration: dotted;
 }
 
@@ -51,28 +76,25 @@ a:active {
     }
 }
 
-h1 {
-    font-family: 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 500;
-    color: #00ff00;
+.logo img {
+    display: block;
+    margin: auto;
+    justify-content: center;
 }
 
-h2 {
-    font-weight: 700;
-    background-color: #000000;
-    border-color: #000000;
-    border-width: 0.3em;
-    border-radius: 10px;
-    padding: 5px 5px 5px 10px;
-    margin-block-start: auto;
-    margin-block-end: auto;
+.social img {
+    width: 24px;
+    height: 24px;
+    object-fit: scale-down;
+    padding: 0em 0.3em 0em 0.3em;
 }
 
-h3 {
-    padding: 0px 5px 0px calc(5px + 10px)
+.social {
+    padding-left: 0px;
 }
 
-p {
-    font-weight: 100;
-    padding: 0px 5px 0px calc(5px + 10px)
+.social ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
 }

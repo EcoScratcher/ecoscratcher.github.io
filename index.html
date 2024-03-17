@@ -40,21 +40,32 @@
             <h2><a href="https://explorethemetaverse.substack.com">Explorers of the Metaverse</a></h2>
             <p>Blog covering all things Roblox, from unreleased features to game reviews.</p>
             <iframe src="https://explorethemetaverse.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+            <p>A selection of the better parts of my work, from articles to notable tweets:</p>
             <ul id="article-list">
-                <!-- intentionally left blank for js to handle -->
+                <li>
+                    <a href="https://twitter.com/EcoScratcher/status/1763111397138018422">
+                        TWEET: One of the first people to discover the existence of The Hunt: First Edition. 
+                    </a>
+                    <a href="https://twitter.com/DavidBaszucki/status/1763308947602333899">
+                        Seems cool.
+                    </a>
+                </li>
+                <li>
+                    <a href="https://explorethemetaverse.substack.com/p/customisable-fps-caps-coming-to-roblox">
+                        ARTICLE: Teased customisable frame-rate caps within Roblox's Game Settings
+                    </a>
+                </li>
+                <li>
+                    <a href="https://explorethemetaverse.substack.com/p/roblox-classic-and-r15-migrator-the">
+                        ARTICLE: Teased Roblox's upcoming R6 to R15 converter
+                    </a>
+                </li>
+                <li>
+                    <a href="https://explorethemetaverse.substack.com/p/the-bbcs-dangerous-disinformation">
+                        ARTICLE: Battled the BBC over Quintin Smith's disinformation about Roblox development
+                    </a>
+                </li>
             </ul>
-            <script>
-                // Fetches first few articles from Explorers of the Metaverse and displays them here
-                var contentStart = document.getElementById("article-list")
-                const RSS_URL = "https://explorethemetaverse.substack.com/feed"
-
-                function createArticleListing(articleName, articleCoverImage, articleDesc) {
-                    const item = document.createElement("li");
-                    const title = item.createTextNode(articleName);
-                    item.appendChild(title);
-                    contentStart.appendChild(item);
-                }
-            </script>
         </div>
         <div class="project">
             <img src="">
