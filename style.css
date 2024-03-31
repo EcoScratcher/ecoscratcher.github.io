@@ -13,7 +13,14 @@ main {
 
 h1 {
     font-family: 'Source Code Pro', 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 500;
+    font-weight: 900;
+    background-color: #000000;
+    border-color: #000000;
+    border-width: 0.3em;
+    border-radius: 10px;
+    padding: 5px 5px 5px 10px;
+    margin-block-start: auto;
+    margin-block-end: auto;
 }
 
 h2 {
@@ -31,6 +38,10 @@ h3 {
     padding: 0px 5px 0px calc(5px + 10px)
 }
 
+h4 {
+    padding: 0px 5px 0px calc(5px + 10px)
+}
+
 p {
     font-weight: 100;
     padding: 0px 5px 0px calc(5px + 10px)
@@ -40,15 +51,15 @@ h2 a {
     text-decoration: none;
 }
 
+a:active {
+    color: rgb(0, 230, 0);
+    text-decoration: underline;
+}
+
 a {
     text-decoration-style: dashed;
     color: rgb(0, 200, 0);
     text-decoration: dotted;
-}
-
-a:active {
-    color: rgb(0, 100, 0);
-    text-decoration: underline;
 }
 
 .sidebar {
